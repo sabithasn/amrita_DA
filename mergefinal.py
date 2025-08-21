@@ -42,7 +42,7 @@ def decode_filename(filename):
         if part in campus_codes:
             campus = campus_codes[part]
 
-    return school or 'Unknown School', campus or 'Amritapuri'
+    return school or 'Unknown School', campus or 'Unknown Campus'
 
 def extract_parent_info(file_path, school, campus):
     source_name = os.path.basename(file_path)
@@ -190,4 +190,5 @@ def merge_all_excels(folder_path):
         print("✅ parents_details.xlsx created.")
 
 # 🏁 Run the merger
+
 merge_all_excels(".")
